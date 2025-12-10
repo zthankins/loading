@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Endless Loading Circle</title>
+<style>
+html,body{height:100%;margin:0;background:#ffffff;font-family:system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+.center{
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+
+/* Circular infinite spinner */
+.spinner{
+width:60px;
+height:60px;
+border:6px solid #e0e0e0;
+border-top-color:#777;
+border-radius:50%;
+animation:spin 0.9s linear infinite;
+}
+
+
+@keyframes spin{
+to { transform: rotate(360deg); }
+}
+
+
+@media (prefers-reduced-motion: reduce){
+.spinner{ animation:none; }
+}
+</style>
+</head>
+<body>
+<main class="center" role="main">
+<div class="spinner" aria-hidden="true"></div>
+</main>
+</body>
+</html>
